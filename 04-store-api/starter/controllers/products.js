@@ -40,7 +40,7 @@ const getAllProducts = async (req, res)=> {
             const [field, operator, value] = item.split('-')
             if (options.includes(field)) {
                 queryObject[field] = { [operator]: Number(value) }
-                // This means { price: { '$gt': 40 }, rating: { '$gte': 4 } }
+                // This means queryObject = { price: { '$gt': 40 }, rating: { '$gte': 4 } }
             }
         })
     }
