@@ -8,7 +8,7 @@ const login = async (req, res) => {
         throw new BadRequestError('Please provide email and password')
     }
 
-    // Just for demo, normallu provided by DB!!
+    // Just for demo, normally provided by DB!!
     const id = new Date().getDate()
 
     // Try to keep payload small
