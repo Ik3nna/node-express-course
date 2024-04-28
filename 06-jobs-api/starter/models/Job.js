@@ -26,4 +26,6 @@ const JobSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
+// Timestamps add the createdAt and updatedAt to the response
+
 module.exports = mongoose.model('Job', JobSchema)
