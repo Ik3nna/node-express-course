@@ -1,4 +1,4 @@
-const Product = require('../models/product');
+ const Product = require('../models/product');
 
 const getAllProductsStatic = async (req, res)=> {
     const products = await Product.find({ 
@@ -65,7 +65,11 @@ const getAllProducts = async (req, res)=> {
     const limit = Number(req.query.limit) || 10
     const skip = (page - 1) * limit
 
+    // Move to the next page
     result = result.skip(skip).limit(limit)
+
+    // Show more items 
+    result = result.limit(limit * page)
 
     const products = await result
 

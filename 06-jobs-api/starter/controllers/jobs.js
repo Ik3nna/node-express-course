@@ -1,5 +1,5 @@
  const Job = require('../models/Job')
- const { StatusCodes } = require('http-status-codes')
+
  const { NotFoundError, BadRequestError } = require('../errors')
 
 const getAllJobs = async (req, res) => {
